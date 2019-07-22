@@ -46,6 +46,6 @@ class RecordsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def record_params
-      params.require(:record).permit(:date, :rounds_completed, :rounds_set, :notes)
+      params.require(:record).permit(:date, :rounds_completed, :rounds_set, :notes, :user_id)
     end
 end
