@@ -20,7 +20,8 @@ class RecordsController < ProtectedController
     @record = current_user.records.build(record_params)
 
     if @record.save
-      render json: @record, status: :created, location: @record
+      render json: @record, status: :created
+      # , location: @record
     else
       render json: @record.errors, status: :unprocessable_entity
     end
@@ -49,6 +50,6 @@ class RecordsController < ProtectedController
 
   # Only allow a trusted parameter "white list" through.
   def record_params
-    params.require(:record).permit(:date, :rounds_completed, :rounds_set, :notes, :user_id)
+    params.require(:record).permit(:date, :rounds_completed, :rounds_set, :notes)
   end
 end

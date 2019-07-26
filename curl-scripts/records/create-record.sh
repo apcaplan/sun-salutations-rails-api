@@ -10,8 +10,7 @@ curl "http://localhost:4741/records" \
       "date": "'"${DATE}"'",
       "rounds_completed": "'"${COMPLETED}"'",
       "rounds_set": "'"${SET}"'",
-      "notes": "'"${NOTES}"'",
-      "user_id": "'"${USER}"'"
+      "notes": "'"${NOTES}"'"
     }
   }'
 
